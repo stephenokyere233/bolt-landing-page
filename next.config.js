@@ -4,9 +4,6 @@ const nextConfig = {
   images: {
     domains: ["bolt.eu"]
   },
-  sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')],
-  },
 }
 
 module.exports = nextConfig
