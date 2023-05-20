@@ -18,7 +18,7 @@ const Header = () => {
                                     ROUTES.map(route => {
                                         const { label, link } = route
                                         return (
-                                            <Link className="nav-link" key={label} href={link}>
+                                            <Link className="nav-link text-dark" key={label} href={link}>
                                                 {label}
                                             </Link>
                                         )
