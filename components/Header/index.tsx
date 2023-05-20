@@ -28,11 +28,11 @@ const Header = () => {
                         </div>
                     </nav>
                 </div>
-                <div>
-                    <button className='btn me-2 btn-block text-white rounded-5 px-4 ' style={{ background: "#34d186" }}>
+                <div className='d-flex align-items-center'>
+                    <button className='btn me-2 btn-block text-white rounded-pill  px-4' style={{ background: "#34d186",fontSize:"20px" }}>
                         Log in
                     </button>
-                    <FiMenu className='d-lg-none mx-2' size={24} />
+                    <FiMenu className='d-lg-none mx-2' size={28} />
                 </div>
 
             </header>

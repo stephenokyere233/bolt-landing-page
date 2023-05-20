@@ -69,17 +69,18 @@ const Form = () => {
     return (
         <>
             <form
-                className='d-flex flex-column gap-3 bg-light rounded-5 needs-validation p-4'
+                className=' bg-light needs-validation p-4'
+                style={{borderRadius:"30px"}}
                 noValidate
                 onSubmit={handleSubmit}
             >
                 <div>
-                    <h3 className='fw-bold'>Become a Bolt driver</h3>
+                    <h3 className='font-weight-bold'>Become a Bolt driver</h3>
                     <p>
                         If you have multiple cars <Link href='#'>sign up as a fleet owner</Link>
                     </p>
                 </div>
-                <div>
+                <div className='mb-3'>
                     <label htmlFor='email'>Email address</label>
                     <input
                         type='email'
@@ -96,11 +97,11 @@ const Form = () => {
                     )}
                 </div>
 
-                <div>
+                <div className='mb-3'>
                     <label htmlFor='phone'>Phone number</label>
-                    <div className={`input-group has-validation}`} >
+                    <div className={`input-group has-validation}`}  >
                         <button
-                            className='btn btn-outline-secondary dropdown-toggle'
+                            className='btn border bg-light dropdown-toggle'
                             type='button'
                             name='phone'
                             data-bs-toggle='dropdown'
@@ -115,8 +116,7 @@ const Form = () => {
                             className={`form-control rounded-1 ${phoneClass}`}
                             aria-label='Text input with dropdown button'
                             required
-                            style={{ width: "200px" }}
-
+                            style={{ width: "200px", height: '60px' }}
                             onChange={handlePhoneChange}
                         />
                         {((isSubmitted && !phone) || !phone) && (
@@ -125,10 +125,10 @@ const Form = () => {
                     </div>
                 </div>
 
-                <div>
+                <div className='mb-3'>
                     <label htmlFor='city'>City</label>
                     <select
-                        className={`form-select`}
+                        className={`custom-select`}
                         style={{ height: '60px' }}
                         id='city'
                         defaultValue={'0'}
@@ -142,7 +142,7 @@ const Form = () => {
                     </select>
                 </div>
 
-                <div className={`form-group form-check`}>
+                <div className={`form-group form-check mb-3`}>
                     <input
                         className={`form-check-input ${agreeClass}`}
                         type='checkbox'
@@ -158,7 +158,7 @@ const Form = () => {
                 </div>
 
                 <button
-                    className='btn text-uppercase rounded-5 text-light w-100 py-3'
+                    className='btn text-uppercase rounded-pill rounded-5 text-light w-100 py-3'
                     style={{ background: '#34d186' }}
                 >
                     sign up as a driver
